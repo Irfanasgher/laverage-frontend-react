@@ -42,7 +42,6 @@ class SinglePost extends Component {
   }
 
   render() {
-    console.log("this.state.image", this.state.image);
     return (
       <section className="single-post">
         <h1>{this.state.title}</h1>
