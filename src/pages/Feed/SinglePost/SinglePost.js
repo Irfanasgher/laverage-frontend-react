@@ -25,13 +25,13 @@ class SinglePost extends Component {
         return res.json();
       })
       .then((resData) => {
-        const imagePath = resData.post.imageUrl.split("laverage-backend-node");
+        const imagePath = resData.post.imageUrl.split("laverage-backend-node/");
         console.log("imagePath", imagePath[1]);
         this.setState({
           title: resData.post.title,
           author: resData.post.creator.name,
           // image: "http://localhost:8080/" + resData.post.imageUrl,
-          image: "http://localhost:8080" + imagePath[1],
+          image: "http://localhost:8080/" + imagePath[1],
           date: new Date(resData.post.createdAt).toLocaleDateString("en-US"),
           content: resData.post.content,
         });
